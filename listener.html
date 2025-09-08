@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listener Demo</title>
+  <style>
+    #myButton {
+      padding: 10px 20px;
+      background-color: lightblue;
+      border: none;
+      cursor: pointer;
+    }
+    #myButton:hover {
+      background-color: deepskyblue;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Event Listener Example</h2>
+  <button id="myButton">Click Me!</button>
+  <br><br>
+  <input type="text" id="myInput" placeholder="Type something..." />
+
+  <script>
+    // Get references to DOM elements
+    const button = document.getElementById('myButton');
+    const input = document.getElementById('myInput');
+
+    // Click event
+    button.addEventListener('click', () => {
+      alert('Button was clicked!');
+    });
+
+    // Mouseover event
+    button.addEventListener('mouseover', () => {
+      console.log('Mouse is over the button');
+    });
+
+    // Keypress event
+    input.addEventListener('keypress', (event) => {
+      console.log(`Key pressed: ${event.key}`);
+    });
+  </script>
+
+</body>
+</html>
